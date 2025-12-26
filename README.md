@@ -12,8 +12,6 @@ A tool to compare followers of multiple accounts (up to 3) and extract commonali
 
 ---
 
----
-
 ### ⚙️ 動作環境とセットアップ / Requirements and Setup
 
 ### 動作環境 (Operating Environment)
