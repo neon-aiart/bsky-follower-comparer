@@ -7,7 +7,7 @@ A tool to compare followers of multiple accounts (up to 3) and extract commonali
 
 ### 🚀 ３つのアカウントを同時比較 / Simultaneous Comparison of 3 Accounts
 
-* 最大3つのアカウントのフォロワーさんを抽出し、「全員共通」「AとBのみ共通」「Aのみ」など、ベン図のような関係性を一瞬でリスト化します。  
+* 最大３つのアカウントのフォロワーさんを抽出し、「全員共通」「AとBのみ共通」「Aのみ」など、ベン図のような関係性を一瞬でリスト化します。  
   Extract followers from up to 3 accounts and instantly list relationships like "Common to all," "Common to A & B," or "Only A."
 
 ---
@@ -38,12 +38,16 @@ A tool to compare followers of multiple accounts (up to 3) and extract commonali
 
 * **Sidebar Integration**: Blueskyの純正メニューに「比較」ボタンを違和感なく追加します。  
   Seamlessly adds a "Compare" button to the official sidebar.
+
 * **User Card Results**: アバター・表示名・ハンドルが揃ったカード形式で表示。  
   Results are displayed as cards with avatars, display names, and handles.
+
 * **One-click Navigation**: クリックでそのユーザーのプロフを別タブで開きます。  
   Click a user to open their profile in a new tab.
+
 * **Easy ID Copy**: ホバー時に表示されるボタンで、ハンドル（@付き）を瞬時にコピー。  
   Hover to reveal a button for instant handle copying (including @).
+
 * **CSV Export**: 各カテゴリの結果をCSV形式で保存可能。  
   Export results for each category as a CSV file.
 
@@ -53,8 +57,10 @@ A tool to compare followers of multiple accounts (up to 3) and extract commonali
 
 * **My Account**: サイドバーから自分のハンドルを取得し、A欄（空欄のとき）に自動セット。  
   Automatically sets your own handle in field A (if empty).
+
 * **Current Page**: 閲覧中のプロフィールURLからハンドルを解析し、B欄（空欄のとき）に自動セット。  
   Analyzes the current profile URL and sets it in field B (if empty).
+
 * SPA（Blueskyの仕様）に対応した正確なターゲット捕捉ロジック。  
   Accurate target detection logic optimized for Bluesky's SPA architecture.
 
@@ -62,10 +68,15 @@ A tool to compare followers of multiple accounts (up to 3) and extract commonali
 
 ### 🌐 認証不要の安全性 / Safe & No Auth Required
 
-* 公式パブリックAPI（`getFollowers`）を使用。ログインやトークンの提供は一切不要です。  
-  Uses official public APIs. No login or access tokens required.
-* セキュリティリスクが極めて低い安心設計。  
-  Designed with security in mind, minimizing risks.
+* **公式パブリックAPI（`getFollowers`）を使用:** ログイン情報の入力やアクセストークンの発行は一切不要。  
+  アプリ側にパスワードを渡す必要がないため、セキュリティリスクを最小限に抑えています。  
+  Uses the official public API. No login or access tokens required, minimizing security risks.
+
+* **ブラウザの既存セッションを利用したデータ取得:** ログイン済みのブラウザ上で実行することで、パブリック制限（非ログイン状態では閲覧不可に設定されたアカウント）がかかっているユーザーの情報も、ブラウザの通信コンテキストを通じて取得可能です。  
+  By running on a logged-in browser, it can fetch data even from accounts with public access restrictions, leveraging the browser's existing session without manual authentication.
+
+* **レート制限への配慮:** パブリックAPIの負荷を抑えるため、自動リトライ機能と適切な待機時間（ウェイト）を実装しています。  
+  Includes automatic retries and wait times to respect API rate limits.
 
 ---
 
@@ -73,8 +84,10 @@ A tool to compare followers of multiple accounts (up to 3) and extract commonali
 
 * **Clean Implementation**: Bluesky本体の動作を汚さないクリーンな実装。  
   Clean code that doesn't interfere with Bluesky's core functions.
+
 * **Rate Limit Protection**: API制限（429エラー）検知時の自動リトライ機能。  
   Automatic retry logic when API rate limits are hit.
+
 * **Dynamic Monitoring**: `MutationObserver` によるページ遷移の常時監視。  
   Continuous monitoring of page transitions using `MutationObserver`.
 
