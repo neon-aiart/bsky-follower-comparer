@@ -30,7 +30,7 @@ A tool to compare followers of multiple accounts (up to 3) and extract commonali
   * **ScriptCat**: [https://scriptcat.org/](https://scriptcat.org/)  
 
 * **スクリプトをインストール (Install the script):**  
-  * [Greasy Fork](https://greasyfork.org/ja/scripts/559742) にアクセスし、「インストール」ボタンを押してください  
+  * [Greasy Fork](https://greasyfork.org/scripts/559742) にアクセスし、「インストール」ボタンを押してください  
     Access and click the "Install" button.  
 
 ---
